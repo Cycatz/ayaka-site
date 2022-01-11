@@ -32,8 +32,8 @@ const std::regex re { R"(\S+)", std::regex::icase };
 假设电话号码为 xxx-xxxxx 的形式
 
 ```cpp
-import <iostream>;
-import <regex>;
+#include <iostream>;
+#include <regex>;
 
 int main() {
     const std::regex re { R"(\d{3}-\d{5})" };
@@ -70,8 +70,8 @@ No
 **示例：判断每行是否均在 20 字符以内**
 
 ```cpp
-import <iostream>;
-import <regex>;
+#include <iostream>;
+#include <regex>;
 
 int main() {
     const std::regex re { R"(^.{21,}$)" };
@@ -98,9 +98,9 @@ No
 **示例：统计词数**
 
 ```cpp
-import <iostream>;
-import <regex>;
-import <iterator>;
+#include <iostream>;
+#include <regex>;
+#include <iterator>;
 
 int main() {
     const std::regex re { R"(\S+)" };
@@ -126,8 +126,8 @@ int main() {
 **示例：匹配字母加数字**
 
 ```cpp
-import <iostream>;
-import <regex>;
+#include <iostream>;
+#include <regex>;
 
 int main() {
     const std::regex re { R"(([A-Za-z]+)([0-9]+))" };
@@ -156,8 +156,8 @@ ABC 9876543
 **示例：匹配长度为 5 的单词的前两个字母**
 
 ```cpp
-import <iostream>;
-import <regex>;
+#include <iostream>;
+#include <regex>;
 
 int main() {
     const std::regex re { R"(\b([a-z]{2})[a-z]{3}\b)" };
@@ -183,8 +183,8 @@ me
 **示例：逐行输出所有单词**
 
 ```cpp
-import <iostream>;
-import <regex>;
+#include <iostream>;
+#include <regex>;
 
 int main() {
     const std::regex re { R"(\S+)" };
@@ -212,8 +212,8 @@ consectetur
 **示例：匹配十六进制数的数字部分**
 
 ```cpp
-import <iostream>;
-import <regex>;
+#include <iostream>;
+#include <regex>;
 
 int main() {
     const std::regex re { R"(0x([0-9a-f]+))" };
@@ -238,9 +238,9 @@ int main() {
 **示例：根据空白字符分割单词（类似 Python 中 [`re.split`](https://docs.python.org/3/library/re.html#re.split)）**
 
 ```cpp
-import <iostream>;
-import <list>;
-import <regex>;
+#include <iostream>;
+#include <list>;
+#include <regex>;
 
 std::list<std::string> split(const std::string& str, const std::regex& delim) {
     const std::sregex_token_iterator
@@ -286,8 +286,8 @@ consectetur
 **示例：将所有 `<h1>` 替换为 `<h2>`，`</h1>` 替换为 `</h2>`**
 
 ``` cpp
-import <iostream>;
-import <regex>;
+#include <iostream>;
+#include <regex>;
 
 int main() {
     const std::regex re { R"(<(\/?)h1>)" };
